@@ -1,0 +1,297 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to NinshoCreateAuthentications (20130831065814)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "authentications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "provider" varchar(255), "uid" varchar(255), "oauth_token" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mCREATE INDEX "index_authentications_on_user_id" ON "authentications" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130831065814')
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUsers (20130831065852)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130831065852')[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 02:05:21 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (125.0ms)
+Compiled static_pages.css  (78ms)  (pid 5136)
+Compiled users.css  (0ms)  (pid 5136)
+Compiled application.css  (218ms)  (pid 5136)
+Compiled jquery.js  (0ms)  (pid 5136)
+Compiled jquery_ujs.js  (0ms)  (pid 5136)
+Compiled static_pages.js  (906ms)  (pid 5136)
+Compiled users.js  (531ms)  (pid 5136)
+Compiled application.js  (1968ms)  (pid 5136)
+Completed 200 OK in 2750ms (Views: 2750.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 02:05:24 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-08-31 02:05:24 -0500
+Served asset /static_pages.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-31 02:05:24 -0500
+Served asset /jquery.js - 200 OK (31ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-31 02:05:24 -0500
+Served asset /jquery_ujs.js - 200 OK (15ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-31 02:05:24 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-08-31 02:05:24 -0500
+Served asset /static_pages.js - 200 OK (15ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-31 02:05:24 -0500
+Served asset /users.js - 200 OK (15ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-31 02:05:25 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-31 02:05:25 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-08-31 02:05:25 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-31 02:05:25 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-08-31 02:05:25 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-31 02:05:25 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 02:10:04 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 172ms (Views: 171.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-31 02:10:04 -0500
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-31 02:10:04 -0500
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-31 02:10:04 -0500
+Served asset /users.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-08-31 02:10:04 -0500
+Served asset /static_pages.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-08-31 02:10:04 -0500
+Served asset /static_pages.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-31 02:10:04 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-31 02:10:04 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-31 02:10:04 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2013-08-31 02:10:12 -0500
+Processing by Ninsho::SessionsController#new as HTML
+  Rendered ninsho/sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-08-31 02:10:12 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-31 02:10:12 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-31 02:10:12 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-31 02:10:12 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-08-31 02:10:12 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-31 02:10:12 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2013-08-31 02:10:17 -0500
+Processing by Ninsho::SessionsController#new as HTML
+  Rendered ninsho/sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-31 02:10:17 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-31 02:10:17 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-08-31 02:10:17 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-31 02:10:17 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-08-31 02:10:17 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-31 02:10:17 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2013-08-31 02:24:56 -0500
+Processing by Ninsho::SessionsController#new as HTML
+  Rendered ninsho/sessions/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 250ms (Views: 250.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-31 02:24:57 -0500
+Served asset /application.css - 304 Not Modified (46ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-08-31 02:24:57 -0500
+Served asset /static_pages.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-31 02:24:57 -0500
+Served asset /jquery.js - 304 Not Modified (62ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-31 02:24:57 -0500
+Served asset /users.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-31 02:24:57 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-08-31 02:24:57 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-31 02:24:57 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-31 02:24:57 -0500
+Served asset /application.js - 304 Not Modified (62ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2013-08-31 02:25:00 -0500
+
+
+Started GET "/auth/facebook/callback?code=AQAAhARdlsdY8hwtfmCUnpdJY47zMIJogMLiBzCQJSAjI4kTGa497V5r-TeLNA0e3txdYgezMUOoGIClOXsipQ1j0Yp5YdVLCDe2GEdD_CTPS9aMJfICipLRth55Jp0X92k6LdFeFbSzREEQdkp16TBlP_Wlp7Rhod7S6qIeBqKD0vbi3PEZF_CTb-CuUf-rDr-UOYR4_Cf7K6NUzXi0HYwJOycyfrYBZtet4la-s7a121X8fultLqWHzWdqcBa7jWrz6aHB50_hfPASParDj1RWvQt8-e0d3HdQMKiX9-wR6Z13dIo6V5RB-yLoprga5xk&state=89aeae072c1a67305c4395b09ae69e95f23abf89a3ffc5f5" for 127.0.0.1 at 2013-08-31 02:25:00 -0500
+Processing by Ninsho::SessionsController#create as HTML
+  Parameters: {"code"=>"AQAAhARdlsdY8hwtfmCUnpdJY47zMIJogMLiBzCQJSAjI4kTGa497V5r-TeLNA0e3txdYgezMUOoGIClOXsipQ1j0Yp5YdVLCDe2GEdD_CTPS9aMJfICipLRth55Jp0X92k6LdFeFbSzREEQdkp16TBlP_Wlp7Rhod7S6qIeBqKD0vbi3PEZF_CTb-CuUf-rDr-UOYR4_Cf7K6NUzXi0HYwJOycyfrYBZtet4la-s7a121X8fultLqWHzWdqcBa7jWrz6aHB50_hfPASParDj1RWvQt8-e0d3HdQMKiX9-wR6Z13dIo6V5RB-yLoprga5xk", "state"=>"89aeae072c1a67305c4395b09ae69e95f23abf89a3ffc5f5", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (0.0ms)[0m  [1mSELECT "authentications".* FROM "authentications" WHERE "authentications"."provider" = 'facebook' AND "authentications"."uid" = '100004028558287' LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'rodrigo@funkalab.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (125.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 31 Aug 2013 07:25:02 UTC +00:00], ["email", "rodrigo@funkalab.com"], ["name", nil], ["updated_at", Sat, 31 Aug 2013 07:25:02 UTC +00:00]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "authentications" ("created_at", "oauth_token", "provider", "uid", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 31 Aug 2013 07:25:02 UTC +00:00], ["oauth_token", "CAAUAvmcKWM8BANGl3uS8h4dBaLmr8hsWHs3jnElAsaNS9vcbWnmZBTxTNXrmkldXSBuaQbtwIZC8NqJw25WbNkB5VVyKBRpoznJ5elGPrZCrVuKIZCw5qwXRc3ZCAzKj5D1cdI6KkVkan8drDWRqjZA0wMY3w7eTZAZAUasEwV6gMpeFrj8kGvIVIXRsF6w4dxwZD"], ["provider", "facebook"], ["uid", "100004028558287"], ["updated_at", Sat, 31 Aug 2013 07:25:02 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mAuthentication Load (0.0ms)[0m  [1mSELECT "authentications".* FROM "authentications" WHERE "authentications"."provider" = 'facebook' AND "authentications"."uid" = '100004028558287' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 906ms (ActiveRecord: 140.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 02:25:02 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-31 02:25:02 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-08-31 02:25:02 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-31 02:25:02 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-31 02:25:02 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-31 02:25:02 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-08-31 02:25:02 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-31 02:25:02 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-31 02:25:02 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-05 09:00:18 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (78.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (500.0ms)
+Completed 200 OK in 1203ms (Views: 1015.6ms | ActiveRecord: 187.5ms)
+Connecting to database specified by database.yml
